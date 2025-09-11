@@ -9,13 +9,12 @@ class X:
         # TODO: Implement evaluation for variable X
         # Should return an Int object with the given x_value
         return Int(int(x_value))
-        
 
     def simplify(self):
         # TODO (Optional Exercise): Implement simplification
         # X cannot be simplified further, so return self
+        # this is simplify
         return self
-        
 
 
 class Int:
@@ -104,6 +103,7 @@ class Mul:
 #         # Hint: Simplify operands first, then apply simplification rules
 #         pass
 
+
 class Sub:
     def __init__(self, p1, p2):
         self.p1 = p1
@@ -129,7 +129,8 @@ class Sub:
         # Hint: Simplify operands first, then apply simplification rules
         pass
 
-#makingbthe second commit
+
+# makingbthe second commit
 # class Div:
 #     def __init__(self, p1, p2):
 #         self.p1 = p1
@@ -153,15 +154,18 @@ class Sub:
 #         pass
 
 
-
 class Div:
     def __init__(self, p1, p2):
         self.p1 = p1
         self.p2 = p2
 
     def __repr__(self):
-        left = f"( {repr(self.p1)} )" if isinstance(self.p1, (Add, Sub)) else repr(self.p1)
-        right = f"( {repr(self.p2)} )" if isinstance(self.p2, (Add, Sub)) else repr(self.p2)
+        left = (
+            f"( {repr(self.p1)} )" if isinstance(self.p1, (Add, Sub)) else repr(self.p1)
+        )
+        right = (
+            f"( {repr(self.p2)} )" if isinstance(self.p2, (Add, Sub)) else repr(self.p2)
+        )
         return f"{left} / {right}"
 
     def evaluate(self, x_value):
@@ -176,9 +180,6 @@ class Div:
         # Examples: X / 1 -> X, 6 / 2 -> 3
         # Hint: Simplify operands first, then apply simplification rules
         pass
-
-
-
 
 
 # Original polynomial example
